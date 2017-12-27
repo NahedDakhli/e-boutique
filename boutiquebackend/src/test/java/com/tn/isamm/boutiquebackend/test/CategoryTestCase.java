@@ -24,7 +24,7 @@ public class CategoryTestCase {
 		categoryDAO = (CategoryDAO)context.getBean("categoryDAO");
 }
 	
-	@Test
+/*	@Test
 	public void testAddCategory() {
 		
 		category = new Category();
@@ -34,6 +34,16 @@ public class CategoryTestCase {
 		category.setImageURL("nahed10.jpg");
 		
 		assertEquals("Successfully added a category inside the table!",true,categoryDAO.add(category));
+		
+		
+	}*/
+	
+public void testGetCategory() {
+		
+		category = categoryDAO.get(1);
+		
+		
+		assertEquals("Successfully fetched a single category from the table!","Television",category.getName());
 		
 		
 	}
