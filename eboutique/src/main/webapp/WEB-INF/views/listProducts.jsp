@@ -10,32 +10,40 @@
 		</div>
 		<!-- to display the actual products -->
 		<div class="col-md-9">
-		
-		<!-- Added breadcrumb component -->
+
+			<!-- Added breadcrumb component -->
 			<div class="row">
 
 				<div class="col-lg-12">
-				
-									<c:if test="${userClickAllProducts == true}">
-				
-				<ol class="breadcrumb">
 
+					<c:if test="${userClickAllProducts == true}">
 
-							<li><a href="${contextRoot}/home">Home</a></li>
-							<li class="active">All Products</li>
+						<script>
+							window.categoryId = '';
+						</script>
 
-
-						</ol>
-						
-						</c:if>
-						
-						<c:if test="${userClickCategoryProducts == true}">
-					
 						<ol class="breadcrumb">
 
 
-							<li><a href="${contextRoot}/home">Home</a></li>
-							<li class="active">Category</li>
+							<li><a href="${contextRoot}/home">Accueil</a></li>
+							<li class="active">Tous les produits</li>
+
+
+						</ol>
+
+					</c:if>
+
+					<c:if test="${userClickCategoryProducts == true}">
+
+						<script>
+							window.categoryId = '${category.id}';
+						</script>
+
+						<ol class="breadcrumb">
+
+
+							<li><a href="${contextRoot}/home">Accueil</a></li>
+							<li class="active">Catégorie</li>
 							<li class="active">${category.name}</li>
 
 
@@ -44,10 +52,59 @@
 
 
 
+				</div>
+
+
+			</div>
+
+			<div class="row">
+
+				<div class="col-xs-12">
+
+
+					<table id="productListTable"
+						class="table table-striped table-borderd">
+
+
+						<thead>
+
+							<tr>
+								<th></th>
+								<th>Nom</th>
+								<th>Marque</th>
+								<th>Prix</th>
+								<th>Qté. Disponible</th>
+								<th></th>
+
+							</tr>
+
+						</thead>
+
+
+						<tfoot>
+
+							<tr>
+								<th></th>
+								<th>Nom</th>
+								<th>Marque</th>
+								<th>Prix</th>
+								<th>Qté. Disponible</th>
+								<th></th>
+
+							</tr>
+
+						</tfoot>
+					</table>
+
+				</div>
+
+			</div>
+
+
+
+		</div>
+
 	</div>
-
-
-
 
 
 
