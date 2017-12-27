@@ -7,14 +7,21 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>eboutique Maven Webapp</name>
 	<url>http://maven.apache.org</url>
-	
+
 	<properties>
 		<javaee.version>8.0</javaee.version>
 		<spring.version>4.3.6.RELEASE</spring.version>
 	</properties>
-	
+
 	<dependencies>
-	
+
+		<!-- Link backend project -->
+		<dependency>
+			<groupId>com.tn.isamm</groupId>
+			<artifactId>boutiquebackend</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+
 		<!-- JAVA EE -->
 		<dependency>
 			<groupId>javax</groupId>
@@ -30,24 +37,24 @@
 			<version>3.8.1</version>
 			<scope>test</scope>
 		</dependency>
-		
+
 		<!-- SPRING -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
-		
+
 		<!-- JSTL -->
 		<dependency>
 			<groupId>jstl</groupId>
 			<artifactId>jstl</artifactId>
 			<version>1.2</version>
 		</dependency>
-		
+
 	</dependencies>
 	<build>
-	<!-- Updated for the latest version of JAVA -->
+		<!-- Updated for the latest version of JAVA -->
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
