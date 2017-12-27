@@ -29,9 +29,9 @@ public class CategoryTestCase {
 		
 		category = new Category();
 		
-		category.setName("Mobile");
-		category.setDescription("thisjhhvhbhhhgvhhghg");
-		category.setImageURL("nahed100.jpg");
+		category.setName("Laptop");
+		category.setDescription("laptopppppppppppp");
+		category.setImageURL("nahed10.jpg");
 		
 		assertEquals("Successfully added a category inside the table!",true,categoryDAO.add(category));
 		
