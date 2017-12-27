@@ -30,7 +30,7 @@ public class CategoryTestCase {
 		category = new Category();
 		
 		category.setName("Souris");
-		category.setDescription("souriiiiiiiiiiiiiis");
+		category.setDescription("souriiiiiiiiiiiiiiis");
 		category.setImageURL("nahed10.jpg");
 		
 		assertEquals("Successfully added a category inside the table!",true,categoryDAO.add(category));
