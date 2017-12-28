@@ -100,7 +100,7 @@ $(function() {
 								mRender : function(data, type, row) {
 
 									if (data < 1) {
-										return '<span style="color:red">Out of Stock!</span>';
+										return '<span style="color:red">En rupture de stock!</span>';
 									}
 
 									return data;
@@ -189,7 +189,7 @@ $(function() {
 									mRender : function(data, type, row) {
 
 										if (data < 1) {
-											return '<span style="color:red">Out of Stock!</span>';
+											return '<span style="color:red">En rupture de stock!</span>';
 										}
 
 										return data;
@@ -238,7 +238,7 @@ $(function() {
 					initComplete: function () {
 						var api = this.api();
 						api.$('.switch input[type="checkbox"]').on('change' , function() {							
-							var dText = (this.checked)? 'You want to activate the Product?': 'You want to de-activate the Product?';
+							var dText = (this.checked)? 'Vous voulez activer le produit?': 'Vous voulez désactiver le produit?';
 							var checked = this.checked;
 							var checkbox = $(this);
 							debugger;
@@ -314,12 +314,12 @@ $(function() {
 				},
 				messages: {					
 					name: {
-						required: 'Please enter product name!',
-						minlength: 'Please enter atleast five characters'
+						required: 'Veuillez entrer le nom du produit!',
+						minlength: 'Veuillez entrer au moins cinq caractères'
 					},
 					description: {
-						required: 'Please enter product name!',
-						minlength: 'Please enter atleast five characters'
+						required: 'Veuillez entrer le nom du produit!',
+						minlength: 'Veuillez entrer au moins cinq caractères'
 					}					
 				},
 				errorElement : "em",
@@ -353,11 +353,11 @@ $(function() {
 				},
 				messages: {					
 					username: {
-						required: 'Please enter your email!',
-						email: 'Please enter a valid email address!'
+						required: 'S"il vous plaît entrer votre email!',
+						email: 'S"il vous plaît, mettez une adresse email valide!'
 					},
 					password: {
-						required: 'Please enter your password!'
+						required: 's"il vous plait entrez votre mot de passe!'
 					}					
 				},
 				errorElement : "em",
@@ -401,7 +401,7 @@ $(function() {
 				bootbox.alert({
 					size: 'medium',
 			    	title: 'Error',
-			    	message: 'Product Count should be minimum 1 and maximum 3!'
+			    	message: 'Le nombre de produits devrait être minimum 1 et maximum 3!'
 				});
 			}
 			else {
