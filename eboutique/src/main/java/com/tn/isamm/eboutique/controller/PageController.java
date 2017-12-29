@@ -115,5 +115,12 @@ public class PageController {
 		return mv;
 		
 	}
+	@RequestMapping(value="/membership")
+	public ModelAndView register() {
+		ModelAndView mv= new ModelAndView("page");
+		
+		mv.addObject("title", "Contact Us");
+		return mv;
+	}
 
 }

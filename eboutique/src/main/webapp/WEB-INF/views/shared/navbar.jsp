@@ -26,10 +26,18 @@
                     </li>
                     
                      <li id="manageProduct">
-	                        <a href="${contextRoot}/manage/product">Gérer les produits</a>
+	                        <a href="${contextRoot}/manage/product">Gestion des produits</a>
 	                    </li>
-				
-                </ul>              
+                </ul>  
+                 <ul class="nav navbar-nav navbar-right">
+	                    <li id="signup">
+	                        <a href="${contextRoot}/membership">Inscription</a>
+	                    </li>
+						<li id="login">
+	                        <a href="${contextRoot}/login">Connexion</a>
+	                    </li> 			    				    	 			    
+                    
+			    </ul>                  
                 
             </div>
             <!-- /.navbar-collapse -->
