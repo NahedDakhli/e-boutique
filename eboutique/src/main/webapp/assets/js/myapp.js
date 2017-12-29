@@ -238,7 +238,7 @@ $(function() {
 					initComplete: function () {
 						var api = this.api();
 						api.$('.switch input[type="checkbox"]').on('change' , function() {							
-							var dText = (this.checked)? 'Vous voulez activer le produit?': 'Vous voulez désactiver le produit?';
+							var dText = (this.checked)? 'Vous voulez activer le produit?': 'Vous voulez desactiver le produit?';
 							var checked = this.checked;
 							var checkbox = $(this);
 							debugger;
@@ -314,12 +314,12 @@ $(function() {
 				},
 				messages: {					
 					name: {
-						required: 'Veuillez entrer le nom du produit!',
-						minlength: 'Veuillez entrer au moins cinq caractères'
+						required: 'Veuillez ajouter le nom de la categorie!',
+						minlength: 'le nom de la categorie ne doit pas etre inferieur a 2 caracteres'
 					},
 					description: {
-						required: 'Veuillez entrer le nom du produit!',
-						minlength: 'Veuillez entrer au moins cinq caractères'
+						required: 'veuillez ajouter une description pour cette categorie!',
+						minlength: 'Veuillez entrer au moins cinq caracteres'
 					}					
 				},
 				errorElement : "em",
@@ -353,7 +353,7 @@ $(function() {
 				},
 				messages: {					
 					username: {
-						required: 'S"il vous plaît entrer votre email!',
+						required: 'S"il vous plait entrer votre email!',
 						email: 'S"il vous plaît, mettez une adresse email valide!'
 					},
 					password: {
@@ -401,7 +401,7 @@ $(function() {
 				bootbox.alert({
 					size: 'medium',
 			    	title: 'Error',
-			    	message: 'Le nombre de produits devrait être minimum 1 et maximum 3!'
+			    	message: 'Le nombre de produits devrait etre minimum 1 et maximum 3!'
 				});
 			}
 			else {
