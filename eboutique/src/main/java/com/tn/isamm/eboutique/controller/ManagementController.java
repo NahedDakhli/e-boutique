@@ -57,10 +57,10 @@ public class ManagementController {
 		
 		if(success != null) {
 			if(success.equals("product")){
-				mv.addObject("message", "Produit soumis avec succÃ¨s!");
+				mv.addObject("message", "Produit soumis avec succès!");
 			}	
 			else if (success.equals("category")) {
-				mv.addObject("message", "CatÃ©gorie soumise avec succÃ¨s!");
+				mv.addObject("message", "Catégorie soumise avec succès!");
 			}
 		}
 			
@@ -100,7 +100,7 @@ public class ManagementController {
 		}
 		
 		if(results.hasErrors()) {
-			model.addAttribute("message", "La validation Ã©choue pour l'ajout du produit!");
+			model.addAttribute("message", "La validation échoue pour l'ajout du produit!");
 			model.addAttribute("userClickManageProduct",true);
 			return "page";
 		}			
@@ -129,7 +129,7 @@ public class ManagementController {
 		boolean isActive = product.isActive();
 		product.setActive(!isActive);
 		productDAO.update(product);		
-		return (isActive)? "Produit dÃ©sactivÃ© avec succÃ¨s! ":" Produit activÃ© avec succÃ¨s";
+		return (isActive)? "Produit désactivé avec succés! ":" Produit activé avec succès";
 	}
 			
 

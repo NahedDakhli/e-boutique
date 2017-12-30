@@ -12,10 +12,6 @@ public interface UserDAO {
 	boolean add(User user);
 	User getByEmail(String email);
 	User get(int id);
-	
-	// CART
-	boolean addCart(Cart cart);
-	boolean updateCart(Cart cart);
 
 	// ADRESSE
 	boolean addAddress(Address address);
@@ -23,4 +19,7 @@ public interface UserDAO {
 	boolean updateAddress(Address address);
 	Address getBillingAddress(int userId);
 	List<Address> listShippingAddresses(int userId);
+	
+
+	
 }

@@ -112,24 +112,5 @@ public class UserDAOImpl implements UserDAO {
 		
 	}
 
-	@Override
-	public boolean addCart(Cart cart) {
-		try {
-			sessionFactory.getCurrentSession().persist(cart);
-			return true;
-		} catch (Exception ex) {
-			return false;
-		}
-	}
-
-	@Override
-	public boolean updateCart(Cart cart) {
-		try {
-			sessionFactory.getCurrentSession().update(cart);
-			return true;
-		} catch (Exception ex) {
-			return false;
-		}
-	}
 
 }
