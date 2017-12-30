@@ -1,9 +1,11 @@
 package com.tn.isamm.eboutique.handler;
 
 import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.stereotype.Component;
 import org.springframework.binding.message.MessageContext;
 import org.springframework.binding.message.MessageBuilder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 import com.tn.isamm.boutiquebackend.dao.UserDAO;
 import com.tn.isamm.boutiquebackend.dto.Address;
@@ -14,6 +16,9 @@ import com.tn.isamm.eboutique.model.RegisterModel;
 @Component
 public class RegisterHandler {
 	
+	 @Autowired
+	 private PasswordEncoder passwordEncoder;
+	 
 	 @Autowired
 	 private UserDAO userDAO;
 	 public RegisterModel init() { 
@@ -32,18 +37,15 @@ public class RegisterHandler {
 		  String transitionValue = "success";
 		  User user = registerModel.getUser();
 		  if(user.getRole().equals("USER")) {
-		   // create a new cart
 		   Cart cart = new Cart();
 		   cart.setUser(user);
 		   user.setCart(cart);
 		  }
 		   
-		  // encode the password
-		  //user.setPassword(passwordEncoder.encode(user.getPassword()));
+		  user.setPassword(passwordEncoder.encode(user.getPassword()));
 		  
-		  // save the user
 		  userDAO.add(user);
-		  // save the billing address
+		  
 		  Address billing = registerModel.getBilling();
 		  billing.setUserId(user.getId());
 		  billing.setBilling(true);  

@@ -354,7 +354,7 @@ $(function() {
 				messages: {					
 					username: {
 						required: 'S"il vous plait entrer votre email!',
-						email: 'S"il vous plaît, mettez une adresse email valide!'
+						email: 'S"il vous plait, mettez une adresse email valide!'
 					},
 					password: {
 						required: 's"il vous plait entrez votre mot de passe!'
