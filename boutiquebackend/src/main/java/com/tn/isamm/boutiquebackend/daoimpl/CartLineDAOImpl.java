@@ -10,6 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.tn.isamm.boutiquebackend.dao.CartLineDAO;
 import com.tn.isamm.boutiquebackend.dto.Cart;
 import com.tn.isamm.boutiquebackend.dto.CartLine;
+import com.tn.isamm.boutiquebackend.dto.OrderDetail;
 
 @Repository("cartLineDAO")
 @Transactional
@@ -105,7 +106,8 @@ public class CartLineDAOImpl implements CartLineDAO {
 										.getResultList();
 	}
 
-	/*@Override
+
+	@Override
 	public boolean addOrderDetail(OrderDetail orderDetail) {
 		try {			
 			sessionFactory.getCurrentSession().persist(orderDetail);			
@@ -114,6 +116,6 @@ public class CartLineDAOImpl implements CartLineDAO {
 		catch(Exception ex) {
 			return false;
 		}
-	}*/
+	}
 		
 }

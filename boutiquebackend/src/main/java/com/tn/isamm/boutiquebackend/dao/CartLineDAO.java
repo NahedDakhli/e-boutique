@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.tn.isamm.boutiquebackend.dto.Cart;
 import com.tn.isamm.boutiquebackend.dto.CartLine;
+import com.tn.isamm.boutiquebackend.dto.OrderDetail;
 
 public interface CartLineDAO {
 	
@@ -19,7 +20,7 @@ public interface CartLineDAO {
 	
 	public List<CartLine> listAvailable(int cartId);
 	
-	//boolean addOrderDetail(OrderDetail orderDetail);
+	boolean addOrderDetail(OrderDetail orderDetail);
 
 
 }
