@@ -118,7 +118,7 @@
        </div>
        <div class="panel-footer">
        	<div class="text-right">
-       		Nouveau Client - <a href="${contextRoot}/register">Inscrivez-vous ici</a>
+       		Nouveau Client - <a href="${contextRoot}/membership">Inscrivez-vous ici</a>
        	</div>
        </div>
       

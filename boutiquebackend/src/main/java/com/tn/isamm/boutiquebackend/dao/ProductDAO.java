@@ -20,4 +20,7 @@ public interface ProductDAO {
 	List<Product> listActiveProductsByCategory(int categoryId);
 	List<Product> getLatestActiveProducts(int count);
 	
+	
+	//public List<Product> list(int userId);
+
 }

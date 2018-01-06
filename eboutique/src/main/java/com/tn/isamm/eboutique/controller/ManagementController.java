@@ -46,9 +46,6 @@ public class ManagementController {
 		mv.addObject("userClickManageProduct",true);
 		
 		Product nProduct = new Product();
-		
-		// assuming that the user is ADMIN
-		// later we will fixed it based on user is SUPPLIER or ADMIN
 		nProduct.setSupplierId(1);
 		nProduct.setActive(true);
 

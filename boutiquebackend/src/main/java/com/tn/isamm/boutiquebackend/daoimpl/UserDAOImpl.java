@@ -11,6 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.tn.isamm.boutiquebackend.dao.UserDAO;
 import com.tn.isamm.boutiquebackend.dto.Address;
 import com.tn.isamm.boutiquebackend.dto.Cart;
+import com.tn.isamm.boutiquebackend.dto.Product;
 import com.tn.isamm.boutiquebackend.dto.User;
 
 @Repository("userDAO")
@@ -110,6 +111,20 @@ public class UserDAOImpl implements UserDAO {
 						.setParameter("isShipping", true)
 							.getResultList();
 		
+	}
+	
+	@Override
+	public boolean update(User user) {
+		try {			
+			sessionFactory
+					.getCurrentSession()
+						.update(user);
+			return true;
+		}
+		catch(Exception ex) {		
+			ex.printStackTrace();			
+		}		
+		return false;		
 	}
 
 

@@ -146,4 +146,13 @@ public class ProductDAOImpl implements ProductDAO {
 		
 	}
 
+	
+	/*@Override
+	public List<Product> list(int userId) {
+		return sessionFactory
+				.getCurrentSession()
+					.createQuery("FROM Product , User_Detail where Product .SUPPLIER_ID = User_Detail.ID AND User_Detail.ID =:userId;" , Product.class)
+						.getResultList();
+	}*/
+
 }

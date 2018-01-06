@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.tn.isamm.boutiquebackend.dto.Address;
 import com.tn.isamm.boutiquebackend.dto.Cart;
+import com.tn.isamm.boutiquebackend.dto.Product;
 import com.tn.isamm.boutiquebackend.dto.User;
 
 public interface UserDAO {
@@ -12,6 +13,8 @@ public interface UserDAO {
 	boolean add(User user);
 	User getByEmail(String email);
 	User get(int id);
+	boolean update(User user);
+
 
 	// ADRESSE
 	boolean addAddress(Address address);
